@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link href="/static/favicon.ico" rel="icon">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <title>Choise | {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <!-- nav links and flashed messages -->
+        <div class="navigation">
+            <!-- nav links -->
+            <nav>
+                <div class="nav-wrap">
+                    <div class="logo">
+                        <h2 class="logo-text">Choise</h2>
+                    </div>
+
+                    <div class="nav-items">
+                        <ul class="list">
+                            <li class="login"><a href="login.html">login</a></li>
+                            <li class="register"><a href="register.html">register</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+            <!-- flashed messages -->  
+            {% if get_flashed_messages() %}
+            <div class="flashed-message">
+                {{ get_flashed_messages() }}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <main class="conatiner-fluid">
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Choise Copyright &copy; <span class="year"></span></p>
+    </footer>
+</body>
+</html>
