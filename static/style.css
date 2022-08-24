@@ -338,9 +338,8 @@ Flash-message
 ===============
 */
 .flashed-message {
-  background-color:rgba(197,157,95,1);
-  padding: .5rem;
-  color: var(--clr-white);
+  background-color:transparent;
+  color: red;
 
 }
 

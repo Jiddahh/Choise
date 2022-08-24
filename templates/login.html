@@ -14,10 +14,17 @@
       <div class="username">
         <input type="text" name="username" placeholder="Username" id="username" autofocus autocomplete="off"/>
       </div>
+
       <div class="password">
         <input type="password" name="password" placeholder="Password" id="password"/>
       </div>
     </div>
+
+   <!-- {% if get_flashed_messages() %}
+            <div class="flashed-message">
+                {{ get_flashed_messages() }}
+            </div>
+   {% endif %} -->
 
     <input type="submit" name="login" id="login" class="btn" value="Login"/>
 

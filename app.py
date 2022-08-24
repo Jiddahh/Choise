@@ -64,13 +64,18 @@ def register():
         user = users.query.filter_by(username=username_submitted).first()
 
         # Ensure a username was submitted 
-        if not username_submitted or password_submitted:
-            flash("must provide username and password", category="error")
+        if not username_submitted:
+            flash("must provide username", category="warning")
+            return redirect("/register")
+
+         # Ensure a password was submitted 
+        if not password_submitted:
+            flash("must provide password", category="warning")
             return redirect("/register")
 
         # Ensure the username doesn't exist 
         elif len(user) != 0:
-            flash("username alredy exists", category="error")
+            flash("username alredy exists", category="warning")
             return redirect("/register")
         
         else:
@@ -108,7 +113,7 @@ def login():
 
         # Ensure username and password was submitted
         if not username_submitted or not password_submitted:
-            flash("username and password must be provided", category="error")
+            flash("username and password must be provided", category="warning")
             return redirect("/login")
 
         # Query database for user
