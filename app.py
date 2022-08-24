@@ -58,7 +58,7 @@ def register():
 
         # Get username and password from form
         username_submitted = request.form.get("username")
-        password_submitted = request.form.get("pasword")
+        password_submitted = request.form.get("password")
 
         # Query database for user
         user = users.query.filter_by(username=username_submitted).first()
@@ -89,8 +89,7 @@ def register():
                 return "error signing you up"
 
     # User reached route via GET (as by clicking a link or redirect) 
-    else:
-        return render_template("register.html")
+    return render_template("register.html")
 
 
 @app.route("/login", methods=["POST", "GET"])
@@ -105,7 +104,7 @@ def login():
 
         # Get username and password from form
         username_submitted = request.form.get("username")
-        password_submitted = request.form.get("pasword")
+        password_submitted = request.form.get("password")
 
         # Ensure username and password was submitted
         if not username_submitted or not password_submitted:

@@ -163,7 +163,6 @@ Navbar
 nav {
     padding: .5rem;
     background-color: var(--clr-white);
-    border-bottom: solid .1rem var(--clr-grey-7);
 }
 .nav-wrap {
     display: flex;
@@ -185,7 +184,7 @@ nav li {
     padding: 1rem;
 
 }
-.logo-text, span {
+.logo-text, .or {
     font-family: 'Dancing Script', cursive;
     color: var(--clr-gold);
 }

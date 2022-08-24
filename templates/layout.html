@@ -8,7 +8,9 @@
     <link href="/static/favicon.ico" rel="icon">
     <!-- stylesheet -->
     <link rel="stylesheet" href="/static/style.css">
-
+    <!-- JavaScript -->
+    <script src="{{url_for('static',filename='choise.js')}}"></script>
+    
     <title>Choise | {% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -24,8 +26,8 @@
 
                     <div class="nav-items">
                         <ul class="list">
-                            <li class="login"><a href="login.html">login</a></li>
-                            <li class="register"><a href="register.html">sign up</a></li>
+                            <li class="login"><a href="login">login</a></li>
+                            <li class="register"><a href="register">sign up</a></li>
                         </ul>
                     </div>
 
@@ -45,7 +47,7 @@
     </main>
 
     <footer>
-        <p>&copy;<span class="year"></span> Choise Company.All Rights Reserved.</p>
+        <p>&copy; <span class="year"></span> Choise Company.All Rights Reserved.</p>
     </footer>
 </body>
 </html>
